@@ -25,3 +25,82 @@ for i in range(0,len(c)):
     print(a*int(c[2-i]))
 print(a*b)
 --------------------------------------------------------------------------------------
+# 백준 1330
+
+a,b=map(int,input().split())
+if a>b : 
+    print(">")
+elif a<b : 
+    print("<")
+else : 
+    print("=")
+----------------------------------------------------------------------------------------
+# 백준 윤년문제
+
+a=int(input())
+if (a%4==0 and not(a%100==0)) or a%400==0 :
+    print(1)
+else :
+    print(0)
+------------------------------------------------------------------------------------------
+# 백준 10817 : 입력되는 숫자 3개 중 두번째로 큰 수를 찾으시오
+a,b,c=map(int,input().split())
+if a<=b<=c : 
+    print(b)
+elif a<=c<=b :
+    print(c)
+elif b<=a<=c :
+    print(a)
+elif b<=c<=a :
+    print(c)
+elif c<=a<=b :
+    print(a)
+else :
+    print(b)
+    
+# sort 함수 활용해 더 쉽게 풀기
+
+data=list(map(int,input().split()))
+data_sorted = sorted(data)          # reverse = True : 내림차순, 디폴트 : 오름차순
+print(data_sorted[1])
+-------------------------------------------------------------------------------------------
+# 백준 10818번
+a=int(input())
+lst = list(map(int,input().split()))
+lst_sorted = sorted(lst)
+print(lst_sorted[0],lst_sorted[a-1])
+---------------------------------------------------------------------------------------------
+# 백준 10819번
+lst=[]              # 입력값들을 받기 위해 빈 리스트 생성
+for i in range(1,10) : 
+    lst.append(int(input()))                # 들어오는 순서대로 입력값을 순차적으로 빈 리스트에 담기
+lst_sorted = sorted(lst)
+print(lst_sorted[8])
+print(lst.index(lst_sorted[8])+1)           # index 함수 : 원소 입력을 통해 해당 원소의 위치를 출력
+-----------------------------------------------------------------------------------------------
+# 백준 11021번
+
+a=int(input())
+for i in range(1,1+a) : 
+    c,d = map(int,input().split())
+    print("Case #{}: {}".format(i,c+d))          # 출력오류 주의 : 프린트된 결과는 줄 전부가 str이거나 int 등으로 하나로 통일되야함
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
