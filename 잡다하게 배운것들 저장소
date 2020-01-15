@@ -63,3 +63,25 @@ import random
 numbers = range(1,46)
 lotto = random.sample(numbers,6)
 print(sorted(lotto))
+--------------------------------------------------------------------------------------------------------------
+# break : 반복문이 돌다가 break를 만나면 반복문을 빠져나오는 것
+
+answer = ""
+while True :
+    answer = input("명령을 입력하세요 \n 'q'를 입력하면 프로그램이 종료됩니다. : ")
+    if answer == "q" :
+        break
+    print("{}를 입력하였습니다.".format(answer))
+--------------------------------------------------------------------------------------------------------------
+# continue : 해당 부분을 건너뛰고 다음 순서로 넘어가는 것
+
+num = [1,2,3,4,5,6,7,8,9,10]
+total = 0
+for i in num :
+    if (i%3 == 0) :
+        continue
+    total += i
+
+print(total)
+
+print("프로그램을 종료합니다.")
