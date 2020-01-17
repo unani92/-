@@ -104,3 +104,15 @@ def func_par_noreturns(x,y,z) :
 
 ref_var_noreturn = func_par_noreturns(4,5,6)
 print(ref_var_noreturn)                               # 출력값이 없으므로 None 반환
+------------------------------------------------------------------------------------------------------------------
+# lambda 함수 사용 : 리스트 전부에 함수를 걸어주고 싶을 때 사용
+data_lst = list(range(1,21))
+map_list = map(lambda x : x+5,data_lst)
+print(type(map_list))
+ # filter 함수 : 리스트 원소 중 조건식에 맞는 것만 필터링
+m_list_3 = filter(lambda x : x%3==0, map_list)    
+print(m_list_3)
+
+# eval() 함수 사용 : 문자열에 포함된 연산자를 인식해 출력값을 낼 때 사용
+map_str = input("항목 x에 적용할 표현식을 입력하시오")   # 예) x+5
+filter_str = input("항목 x에 대해 필터링할 조건을 입력하시오") # 예) x%3 == 0
